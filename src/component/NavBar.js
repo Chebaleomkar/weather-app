@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Api from './Api';
 
 
-export default function NavBar({ }) {
-
-  
+export default function NavBar(props) {
+  const [searchQuery, setSearchQuery] = useState('');
+   console.log(searchQuery);
   return (
     <>
 
@@ -24,26 +25,22 @@ export default function NavBar({ }) {
               </li>
 
             
-              {/* <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </Link>
-                <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" href="#">Action</Link></li>
-                  <li><Link className="dropdown-item" href="#">Another action</Link></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><Link className="dropdown-item" href="#">Something else here</Link></li>
-                </ul>
-              </li> */}
+              
              
             </ul>
             <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)} />
               <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
+
+      <Api city={searchQuery
+      } />
     </>
   );
 }
+
+

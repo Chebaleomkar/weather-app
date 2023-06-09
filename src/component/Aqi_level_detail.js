@@ -29,7 +29,7 @@ export const Aqi_level_detail = () => {
 
 
   return (
-    <>x``
+    <>
 
       <div className="container bg-light" style={dihe}>
 
