@@ -34,5 +34,5 @@ visit now  : https://jocular-cucurucho-1a13cb.netlify.app/
 
 -If you have any questions or feedback, feel free to contact the project maintainers:
 
--Your Name - omkarchebale0@gmail.com
--linkedIn - https://www.linkedin.com/in/omkar-chebale-8b251726b/
+Email - omkarchebale0@gmail.com  | 
+linkedIn - https://www.linkedin.com/in/omkar-chebale-8b251726b/
