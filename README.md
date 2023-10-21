@@ -5,6 +5,8 @@
 
 NewsHub is a web application that provides you with the latest news articles from various categories such as business, entertainment, health, science, sports, technology, and more. It is built using React.js and utilizes the News API for fetching news data.
 
+visit now  : https://jocular-cucurucho-1a13cb.netlify.app/
+
 ![weatherapp](https://github.com/Chebaleomkar/weather-app/assets/122032936/a8a51104-1376-4b36-bef6-188b3fb26a7b)
 
 ## Features
