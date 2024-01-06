@@ -1,7 +1,7 @@
 
 
 
-# Weather HUB - A React.js News App
+# Weather HUB - A React.js Weather App
 
 visit now  : https://jocular-cucurucho-1a13cb.netlify.app/
 
