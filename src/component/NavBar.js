@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Api from './Api';
+import { Alert } from './Alert';
+import i18next from 'i18next';
+import {  useTranslation } from 'react-i18next';
 
 
 export default function NavBar(props) {
   const [searchQuery, setSearchQuery] = useState('');
-   console.log(searchQuery);
+  
+  const { t } = useTranslation();
+  console.log('Nested translation:', t("WEATHER_NAMES.HOME"));
+
   return (
     <>
 
@@ -18,27 +24,34 @@ export default function NavBar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/"> Home </Link>
+                <Link className="nav-link active" aria-current="page" to="/"> {t("WEATHER_NAMES.HOME")}  </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About</Link>
               </li>
 
+              <li>
+              <button className="btn btn-primary" onClick={() => { console.log('Switching to Hindi'); i18next.changeLanguage('hi') }}>  Hindi </button>
+              </li>
             
-              
-             
+            <li>
+              <button className="btn btn-primary"  onClick={() => { i18next.changeLanguage('en') }}>  English </button>
+            </li>
+
+
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  value={searchQuery}
+            <form className="d-flex border border-info" role="search">
+              <input className="form-control me-2" type="search" placeholder="Search city..." aria-label="Search" value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)} />
-              <button className="btn btn-outline-success" type="submit">Search</button>
+              {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
             </form>
           </div>
         </div>
       </nav>
 
-      <Api city={searchQuery
-      } />
+      <Alert msg="Enter a city name to retrieve the search results." />
+
+      <Api city={searchQuery} />
     </>
   );
 }
