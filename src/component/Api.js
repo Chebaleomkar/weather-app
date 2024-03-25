@@ -135,7 +135,7 @@ export default function Api(props) {
           Weather Hub
         </h1>
         <h4 className="">
-          <GeoAltFill /> City: {props.city}
+          <GeoAltFill /> {t("NAME.CITY")} : {props.city}
         </h4>
 
         <div className="row justify-content-start my-3 ">
@@ -144,8 +144,8 @@ export default function Api(props) {
               <div className="card-body text-center">
                 <h2 className="card-title"></h2>
                 <p className="card-text">
-                  <span id="clock" className="fw-bold text-dark">Time : {formatTime(time)}</span> <br/>
-                  <b className="text-dark"> Date: {currentDate.toDateString()}  </b>
+                  <span id="clock" className="fw-bold text-dark"> {t("NAME.TIME")} : {formatTime(time)}</span> <br/>
+                  <b className="text-dark">  {t("NAME.DATE")}: {currentDate.toDateString()}  </b>
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function Api(props) {
             <div className="card mb-4 rounded-3 shadow-sm border-warning">
               <div className="card-header py-3 text-bg-warning border-warning">
                 <h4 className="my-0 fw-normal">
-                  <ThermometerHalf />  {t('WEATHER_NAMES.TEMPERATURE')}
+                  <ThermometerHalf />   {t("NAME.TEMPERATURE")}
                 </h4>
               </div>
               <div className="card-body">
@@ -170,13 +170,13 @@ export default function Api(props) {
                 </h1>
                 <ul className="list-unstyled mt-3 mb-4">
                   <li>
-                    <ThermometerLow /> Min. Temperature &rarr; {min_temp} <sup>o</sup>C
+                    <ThermometerLow /> {t("NAME.MIN")}  &rarr; {min_temp} <sup>o</sup>C
                   </li>
                   <li>
-                    <ThermometerHigh /> Max. Temperature &rarr; {max_temp} <sup>o</sup>C
+                    <ThermometerHigh /> {t("NAME.MAX")}  {t("NAME.TEMPERATURE")} &rarr; {max_temp} <sup>o</sup>C
                   </li>
                   <li>
-                    <CloudSnow /> Feels like &rarr; {feels_like}
+                    <CloudSnow />{t("NAME.FEELS_LIKE")} &rarr; {feels_like}
                   </li>
                 </ul>
               </div>
@@ -186,7 +186,7 @@ export default function Api(props) {
             <div className="card mb-4 rounded-3 shadow-sm border-info">
               <div className="card-header py-3 text-bg-info border-info">
                 <h4 className="my-0 fw-normal">
-                  <CloudHaze2 /> Humidity
+                  <CloudHaze2 /> {t("NAME.HUMIDITY")} 
                 </h4>
               </div>
               <div className="card-body">
@@ -196,13 +196,13 @@ export default function Api(props) {
                 </h1>
                 <ul className="list-unstyled mt-3 mb-4">
                   <li>
-                    <ThermometerLow /> Min. Temperature &rarr; {min_temp} <sup>o</sup>C
+                    <ThermometerLow /> {t("NAME.MIN")}  {t("NAME.TEMPERATURE")}&rarr; {min_temp} <sup>o</sup>C
                   </li>
                   <li>
-                    <ThermometerHigh /> Max. Temperature &rarr; {max_temp} <sup>o</sup>C
+                    <ThermometerHigh />  {t("NAME.MAX")} {t("NAME.TEMPERATURE")} &rarr; {max_temp} <sup>o</sup>C
                   </li>
                   <li>
-                    <CloudSnow /> Feels like &rarr; {feels_like}
+                    <CloudSnow />{t("NAME.FEELS_LIKE")}  &rarr; {feels_like}
                   </li>
                 </ul>
               </div>
@@ -212,7 +212,7 @@ export default function Api(props) {
             <div className="card mb-4 rounded-3 shadow-sm border-primary">
               <div className="card-header py-3 text-bg-primary border-primary">
                 <h4 className="my-0 fw-normal">
-                  <Wind /> Wind
+                  <Wind /> {t("NAME.WIND")}
                 </h4>
               </div>
               <div className="card-body">
@@ -221,13 +221,13 @@ export default function Api(props) {
                 </h1>
                 <ul className="list-unstyled mt-3 mb-4">
                   <li>
-                    <TropicalStorm /> Wind Degree &rarr; {wind_degrees}<sup>o</sup>
+                    <TropicalStorm /> {t("NAME.WIND_DEGREE")} &rarr; {wind_degrees}<sup>o</sup>
                   </li>
                   <li>
-                    <Sun /> Temperature &rarr; {temp}<sup>o</sup>C
+                    <Sun /> {t("NAME.TEMPERATURE")} &rarr; {temp}<sup>o</sup>C
                   </li>
                   <li>
-                    <CloudSnow /> Feels like &rarr; {feels_like}
+                    <CloudSnow />{t("NAME.FEELS_LIKE")} &rarr; {feels_like}
                   </li>
                 </ul>
               </div>
@@ -235,13 +235,13 @@ export default function Api(props) {
           </div>
         </div>
 
-        <h2 className="text-center">Air Quality Report</h2>
+        <h2 className="text-center"> {t("NAME.AIR_QUALITY_REPORT")}</h2>
 
         <div className="d-grid gap-1 my-4">
           <div className="card mb-4 rounded-3 shadow-sm border-warning">
             <div className="card-header py-3 text-bg-info border-dark">
               <h4 className="my-0 fw-normal">
-                <b>Overall AQI</b> &rarr; {aqi}
+                <b>{t("NAME.OVERALL_AQI")}</b> &rarr; {aqi}
               </h4>
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function Api(props) {
                 <ul className="list-unstyled">
                   <hr />
                   <li>CO AQI &rarr; {coaqi}</li>
-                  <li>CO concentration &rarr; {co}</li>
+                  <li>CO {t("NAME.CONCENTRATION")} &rarr; {co}</li>
                 </ul>
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function Api(props) {
                     NO<sub>2</sub> AQI &rarr; {no2aqi}
                   </li>
                   <li>
-                    NO<sub>2</sub> concentration &rarr; {no2}
+                    NO<sub>2</sub>  {t("NAME.CONCENTRATION")} &rarr; {no2}
                   </li>
                 </ul>
               </div>
@@ -288,7 +288,7 @@ export default function Api(props) {
                     O<sub>3</sub> AQI &rarr; {o3aqi}
                   </li>
                   <li>
-                    O<sub>3</sub> concentration &rarr; {o3}
+                    O<sub>3</sub>  {t("NAME.CONCENTRATION")} &rarr; {o3}
                   </li>
                 </ul>
               </div>
@@ -307,7 +307,7 @@ export default function Api(props) {
                     PM 2.5 AQI &rarr; {pm25aqi}
                   </li>
                   <li>
-                    PM 2.5 concentration &rarr; {pm25}
+                    PM 2.5  {t("NAME.CONCENTRATION")} &rarr; {pm25}
                   </li>
                 </ul>
               </div>
@@ -324,7 +324,7 @@ export default function Api(props) {
                     PM 10 AQI &rarr; {pm10aqi}
                   </li>
                   <li>
-                    PM 10 concentration &rarr; {pm10}
+                    PM 10  {t("NAME.CONCENTRATION")} &rarr; {pm10}
                   </li>
                 </ul>
               </div>
@@ -341,14 +341,14 @@ export default function Api(props) {
                     SO2 AQI &rarr; {so2aqi}
                   </li>
                   <li>
-                   SO2 concentration &rarr; {so2}
+                   SO2  {t("NAME.CONCENTRATION")} &rarr; {so2}
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <Link className="btn btn-danger" to="/aqileveldetail" role="button">More about aqi Level </Link>
+          <Link className="btn btn-success ml-24" to="/aqileveldetail" role="button"> {t("NAME.MORE_ABOUT_AQI_LEVEL")}</Link>
           
         </div>
 

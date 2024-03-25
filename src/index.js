@@ -11,10 +11,15 @@ i18next.init({
   lng: 'en',
   resources: {
     en: {
-      translation: WEATHER_NAMES.en
+      translation:{
+        "NAME" : WEATHER_NAMES.en
+      }
     },
     hi: {
-      translation: WEATHER_NAMES.hi
+      translation:{
+       "NAME": WEATHER_NAMES.hi
+      } 
+        
     },
   },
 });
