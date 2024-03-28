@@ -2,6 +2,8 @@
 
 Weather Hub is a real-time weather application built with React. It provides users with detailed weather information and Air Quality Index (AQI) data. The app supports both English and Hindi languages using i18n for localization.
 
+* Visit WeatherHub : https://jocular-cucurucho-1a13cb.netlify.app/
+
 ## Features
 
 - Real-time weather updates based on user location
