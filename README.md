@@ -20,4 +20,4 @@ Weather Hub is a real-time weather application built with React. It provides use
 
 
 
-1. Clone the repository: git@github.com:Chebaleomkar/Spotify-clone-.git
+1. Clone the repository: Chebaleomkar/Spotify-clone-.git
